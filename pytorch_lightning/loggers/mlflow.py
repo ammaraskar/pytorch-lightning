@@ -30,7 +30,8 @@ from time import time
 try:
     import mlflow
 except ImportError:
-    raise ImportError('Missing mlflow package.')
+    raise ImportError('You want to use `mlflow` logger which is not installed yet,'
+                      ' please install it e.g. `pip install mlflow`.')
 
 from .base import LightningLoggerBase, rank_zero_only
 

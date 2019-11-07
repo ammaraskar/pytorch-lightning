@@ -17,7 +17,8 @@ try:
         # For more information, see: https://www.comet.ml/docs/python-sdk/releases/#release-300
         from comet_ml.papi import API
 except ImportError:
-    raise ImportError('Missing comet_ml package.')
+    raise ImportError('You want to use `comet_ml` logger which is not installed yet,'
+                      ' please install it e.g. `pip install comet_ml`.')
 
 from torch import is_tensor
 
