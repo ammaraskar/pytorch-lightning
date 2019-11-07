@@ -3,6 +3,7 @@ import logging
 from abc import ABC
 
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
+from pytorch_lightning.logging.base import LightningLoggerBase
 
 
 class TrainerCallbackConfigMixin(ABC):
@@ -93,7 +94,7 @@ class TrainerCallbackConfigMixin(ABC):
                 logger = None
 
         # configure logger
-        if isinstance(logger, object):
+        if isinstance(logger, LightningLoggerBase):
             self.logger = logger
             self.logger.rank = 0
         else:
