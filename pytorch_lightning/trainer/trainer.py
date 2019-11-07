@@ -52,7 +52,7 @@ class Trainer(TrainerIOMixin,
 
     def __init__(
             self,
-            logger=True,
+            logger='test-tube',
             checkpoint_callback=True,
             early_stop_callback=None,
             default_save_path=None,
