@@ -12,10 +12,7 @@ from pytorch_lightning.core import memory
 from tests.models import (
     LightningTestModel,
 )
-from pytorch_lightning.trainer.distrib_parts import (
-    parse_gpu_ids,
-    determine_root_gpu_device,
-)
+from pytorch_lightning.train.distrib_parts import parse_gpu_ids, determine_root_gpu_device
 from pytorch_lightning.utilities.debugging import MisconfigurationException
 
 PRETEND_N_OF_GPUS = 16

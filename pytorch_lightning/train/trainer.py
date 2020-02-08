@@ -9,22 +9,18 @@ import torch.multiprocessing as mp
 from tqdm.auto import tqdm
 from torch.optim.optimizer import Optimizer
 
-from pytorch_lightning.trainer.auto_mix_precision import TrainerAMPMixin
-from pytorch_lightning.trainer.callback_config import TrainerCallbackConfigMixin
-from pytorch_lightning.trainer.data_loading import TrainerDataLoadingMixin
-from pytorch_lightning.trainer.distrib_data_parallel import TrainerDDPMixin
-from pytorch_lightning.trainer.distrib_parts import (
-    TrainerDPMixin,
-    parse_gpu_ids,
-    determine_root_gpu_device
-)
-
-from pytorch_lightning.trainer.evaluation_loop import TrainerEvaluationLoopMixin
-from pytorch_lightning.trainer.logging import TrainerLoggingMixin
-from pytorch_lightning.trainer.model_hooks import TrainerModelHooksMixin
-from pytorch_lightning.trainer.training_io import TrainerIOMixin
-from pytorch_lightning.trainer.training_loop import TrainerTrainLoopMixin
-from pytorch_lightning.trainer.training_tricks import TrainerTrainingTricksMixin
+from pytorch_lightning.train.auto_mix_precision import TrainerAMPMixin
+from pytorch_lightning.train.callback_config import TrainerCallbackConfigMixin
+from pytorch_lightning.train.data_loading import TrainerDataLoadingMixin
+from pytorch_lightning.train.distrib_data_parallel import TrainerDDPMixin
+from pytorch_lightning.train.distrib_parts import (
+    TrainerDPMixin, parse_gpu_ids, determine_root_gpu_device)
+from pytorch_lightning.train.evaluation_loop import TrainerEvaluationLoopMixin
+from pytorch_lightning.train.logging import TrainerLoggingMixin
+from pytorch_lightning.train.model_hooks import TrainerModelHooksMixin
+from pytorch_lightning.train.training_io import TrainerIOMixin
+from pytorch_lightning.train.training_loop import TrainerTrainLoopMixin
+from pytorch_lightning.train.training_tricks import TrainerTrainingTricksMixin
 from pytorch_lightning.utilities.debugging import MisconfigurationException
 from pytorch_lightning.profiler import Profiler, PassThroughProfiler
 
