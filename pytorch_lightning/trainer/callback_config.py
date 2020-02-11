@@ -3,7 +3,7 @@ import logging
 from abc import ABC
 
 from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
-from pytorch_lightning.logging.base import LightningLoggerBase
+from pytorch_lightning.loggers.base import LightningLoggerBase
 
 
 class TrainerCallbackConfigMixin(ABC):
@@ -83,7 +83,7 @@ class TrainerCallbackConfigMixin(ABC):
         # default logger
         if isinstance(logger, str) and logger == 'test-tube':
             try:
-                from pytorch_lightning.logging import TestTubeLogger
+                from pytorch_lightning.loggers import TestTubeLogger
                 logger = TestTubeLogger(
                     save_dir=self.default_save_path,
                     version=self.slurm_job_id,
