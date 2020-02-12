@@ -28,5 +28,5 @@ steps:
 
 - script: |
     pip install tox pytest-azurepipelines
-    tox
+    tox --sitepackages
   displayName: 'tox'
