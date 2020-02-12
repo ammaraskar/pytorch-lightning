@@ -1,10 +1,10 @@
 """
-.. warning:: `trainer` package has been renamed to `train` since v0.6.0 and will be removed in v0.8.0
+.. warning:: `trainer` package has been renamed to `training` since v0.6.0 and will be removed in v0.8.0
 """
 
 import warnings
 
-from pytorch_lightning.train import (  # noqa: E402
+from pytorch_lightning.training import (  # noqa: E402
     auto_mix_precision,
     callback_config,
     data_loading,
@@ -15,13 +15,13 @@ from pytorch_lightning.train import (  # noqa: E402
     logging,
     model_hooks,
     trainer,
-    training_io,
-    training_loop,
-    training_tricks
+    train_io as training_io,
+    train_loop as training_loop,
+    train_tricks as training_tricks,
 )
-from pytorch_lightning.train import Trainer
+from pytorch_lightning.training import Trainer
 
-warnings.warn("`trainer` package has been renamed to `train` since v0.6.0"
+warnings.warn("`trainer` package has been renamed to `training` since v0.6.0"
               " and will be removed in v0.8.0", DeprecationWarning)
 
 __all__ = ['Trainer']
