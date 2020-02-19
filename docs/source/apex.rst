@@ -2,9 +2,6 @@
 =================
 Lightning uses NVIDIA apex to handle 16-bit precision training.
 
-Test
-
-.. add-an-error:: whoops!
 
 To use 16-bit precision, do two things:
 1. Install Apex
